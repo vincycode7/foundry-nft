@@ -5,11 +5,14 @@ libs = ["lib"]
 fs_permissions = [
     { access = "read", path = "./images/" },
     { access = "read", path = "./broadcast" },
-    { access = "read", path = "./lib/forge-devops" }
+        { access = "read", path = "./lib/foundry-devops" }
 ]
 
-remappings = ['@openzeppelin/contracts=lib/openzeppelin-contracts/contracts']
-
+remappings = [
+    '@openzeppelin/contracts=lib/openzeppelin-contracts/contracts',
+    'foundry-devops=lib/foundry-devops',
+]
+ffi = true
 [etherscan]
 mainnet = { key = "${ETHERSCAN_API_KEY}" }
 sepolia = { key = "${ETHERSCAN_API_KEY}" }
